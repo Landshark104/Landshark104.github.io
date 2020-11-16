@@ -23,12 +23,13 @@
       <ul>
         <li><a href="index.tasks.html"><i class="fas fa-today"></i>Tasks</a></li>
         <li><a href="index.projects.html"><i class="fas fa-projects"></i>Projects</a></li>
-        <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Set A Reminder</a></li>
+        <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Reminders</a></li>
     </ul>  
     </div>
     <div class="main_content">
         <div class="header">Todays Tasks</div>  
         <div class="info">
+          <input type="text" id="search" onkeyup="searchTable()" placeholder="Search for a Task Name..." title="Search">
           <div class="Ttable">
             <table border="1" id="TaskTable">
               <tr class="aligncenter" style="font-weight: bold;">
@@ -36,7 +37,7 @@
                   <th>Name</th>
                   <th>Description</th>
                   <th>Date</th>
-                  <th>Priority</th>
+                  <th onclick="sortTable(4)">Priority</th>  
                   <th>Delete</th>
                   <th>Update</th>
               </tr>
@@ -44,11 +45,13 @@
           </div>
     </div>
     <div class="footer">
-      <p>About us</p>
+      <p>Copyright© Landshark™</p>
     </div>
   </div>
   <script src="js/indexedDB.js"></script>
   <script src="js/ListItems.js"></script>
   <script src="js/ListItemsDAO.js"></script>
+  <script src="js/ListItemsort.js"></script>
+  <script src="js/tableSearch.js"></script>
   </body>
 </html>

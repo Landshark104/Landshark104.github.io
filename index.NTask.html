@@ -31,7 +31,7 @@
         <ul>
             <li><a href="index.tasks.html"><i class="fas fa-today"></i>Tasks</a></li>
             <li><a href="index.projects.html"><i class="fas fa-projects"></i>Projects</a></li>
-            <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Set A Reminder</a></li>
+            <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Reminders</a></li>
         </ul> 
     </div>
     <div class="main_content">
@@ -72,20 +72,22 @@
               
                 <div class="col-25">
                   <label for="pri">Priority:</label><br>
-                  <label for="pri">(1 Highest Priority 3 Lowest Priority)</label><br>
                 </div>
 
                 <div class="col-75">
                   <select id="pri" name="priority">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
                   </select>
                 </div>
                   <input type="submit" id="btnSaveItem" value="save">
             </form>
           </div>
       </div>
+    </div>
+    <div class="footer">
+      <p>Copyright© Landshark™</p>
     </div>
   </div>
   <script src="js/indexedDB.js"></script>
