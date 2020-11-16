@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+<title>To-Do</title>
+<link href="css/landing.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="background-color: #141414; overflow: hidden; user-select: none;">
+	<div class="pad" style="text-align: center; position: fixed; width:100%;">
+	<div class="buttons" style="float: right;">
+		<button class="raise1" onclick="window.location.href='index.overview.html'">Proceed</button>
+	</div>
+	<h1 style="color: #c2ac4d; font-size: 4.5rem; font-weight: 400; margin-bottom: 5px; text-align: center; padding-left: 10%;">To-Do</h1>
+	<div style="color: #c2ac4d; font-weight: 300;">
+		<span style="font-size: 2rem;" id="typer"></span>
+		<span style="font-size: 3rem; animation: blink 1s infinite;" >|</span>
+	</div>
+	<div class="images" style="margin-top: 3%;">
+		<div class="image-container">
+			<img src="Images/PH.png" alt="#">
+			<img class="transition-image" src="Images/PH1.png" alt="#">
+		</div>
+
+		<div class="image-container fade">
+			<img src="Images/PH3.png" alt="#">
+		</div>
+	</div>
+	<div class="footer">
+		<p>About us</p>
+	</div>
+
+	<div id="particles-js"></div>
+	<script>
+			var i = 0;
+			var txt = 'Keep ahead of your deadlines!';
+
+			function typeWriter() {
+				if (i < txt.length) {
+					document.getElementById("typer").innerHTML += txt.charAt(i);
+					i++;
+					setTimeout(typeWriter, 50);
+				}
+			}
+			typeWriter();
+	</script>
+</body>
+</html>

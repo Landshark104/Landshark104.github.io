@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="css/indexo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .info {
+      border-radius: 5px;
+      background-color: #5c5a5a;
+      padding: 20px;
+    }
+      </style>
+  </head>
+  <body>
+  <nav>
+      <div class="logo">To-Do</div>
+      
+      <ul>
+        <li><a class="active" href="">New Task</a></li>
+        <li><a onclick="window.location.href='index.calander.html'">Calander</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a onclick="window.location.href='index.html'">Exit</a></li>
+      </ul>
+  </nav>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2><a href="index.overview.html">Overview</a></h2>
+        <ul>
+            <li><a href="index.tasks.html"><i class="fas fa-today"></i>Tasks</a></li>
+            <li><a href="index.projects.html"><i class="fas fa-projects"></i>Projects</a></li>
+            <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Set A Reminder</a></li>
+        </ul> 
+    </div>
+    <div class="main_content">
+        <div class="header">Create a New Task</div>  
+        <div class="info">
+          <div class="Ntask">
+            <form id="Ntasks">
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="Tname">Task Name:</label><br>
+                </div>
+
+                <div class="col-75">
+                  <input placeholder="Task Name..." type="text" id="Tname" name="Tname"><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="Tdes">Task Description:</label><br>
+                </div>
+
+                <div class="col-75">
+                  <input placeholder="Description of the Task..." type="text" id="Tdes" name="Tdes"><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="date">Date:</label><br>
+                </div>
+
+                <div class="col-75">
+                  <input placeholder="Date..." type="text" id="date" name="date"><br>
+                </div>
+              </div>
+              
+                <div class="col-25">
+                  <label for="pri">Priority:</label><br>
+                  <label for="pri">(1 Highest Priority 3 Lowest Priority)</label><br>
+                </div>
+
+                <div class="col-75">
+                  <select id="pri" name="priority">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                  <input type="submit" id="btnSaveItem" value="save">
+            </form>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/indexedDB.js"></script>
+  <script src="js/AddItem.js"></script>
+  <script src="js/AdditemDAO.js"></script>
+  </body>
+</html>
