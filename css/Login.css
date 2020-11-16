@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+html { /*settings for the page */
+    height: 100%;
+  }
+  body { /*more settings for the page overall 745a12*/
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: #141414; /*1st is top colour mixed with middle (2nd) and bottom (3rd) */
+  }
+  
+  .login-box { /*draws the box to hold the login info details*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background:linear-gradient(#745a12, black);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+  
+  .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .login-box .user-box {
+    position: relative;
+  }
+  
+  .login-box .user-box input { /*controls cursor and text input by a user*/
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+  }
+  .login-box .user-box label { /*controls the "before" click on the input box for the labels*/
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+  }
+  
+  .login-box .user-box input:focus ~ label,
+  .login-box .user-box input:valid ~ label { /*controls the text movement settings after it has moved */
+    top: -20px;
+    left: 0;
+    color: #cebf36; /* change colour of the text after it has transitioned*/
+    font-size: 12px;
+  }
+  
+  .login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #cebf36; /*Login box colour  */
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+  }
+  
+  .login-box a span {
+    position: absolute;
+    display: block;
+  }
+  
+  .logins:hover,
+  .logins:focus,
+  .login:hover, /*changes the button position and adds a shadow below the button */
+  .login:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover); /*controls the box shadow*/
+  transform: translateY(-0.35em);
+  color: #ffa260;
+  box-shadow: 0px 5px 5px #ffa260;
+  transition: .5s;
+  }
+
+  button{ /*setting for the button style */
+    background: None;
+    align-items: flex-end;
+    border: 2px solid;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    line-height: 1;
+    padding: 0.8em 2em;
+    color: rgb(73, 65, 16);
+    cursor: pointer;   
+}
+
+.login{ /*change button colour */
+    color: #c2ac4d;
+}
+
+p{
+  color: #c2ac4d;
+}
