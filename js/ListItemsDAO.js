@@ -9,8 +9,8 @@ function showAllItems(){
                 <td class="Desc">' + results[i].itemDesc + '</td>\
                 <td class="date">' + results[i].date + '</td>\
                 <td class="pri">' + results[i].pri + '</td>\
-                <td><a href="$" class="Delete">Delete</a></td>\
-                <td><a href="#" class="Update">Update</a></td>\
+                <td><button class="Delete">Delete</button></td>\
+                <td><button class="Update">Update</button></td>\
                 </tr>'
             )
         }

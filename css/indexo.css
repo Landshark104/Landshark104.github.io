@@ -359,13 +359,23 @@ input[type=submit]:hover {
   }
 }
 
-#search {
-  background-position: 10px 10px;
+#search[type=text] {
+  width: 16%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
   background-repeat: no-repeat;
-  width: 40%;
-  font-size: 18px;
-  padding: 10px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-  margin-left: 30%;
+  padding: 12px 20px 12px 40px;
+  margin-left: 15%;
+  margin-bottom: 10px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.2s ease-in-out;
+}
+
+#search[type=text]:focus {
+  width: 65%;
 }
