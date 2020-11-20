@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="css/indexo.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/indexedDB.js"></script>
+    <style>
+    .info {
+      border-radius: 5px;
+      background-color: #5c5a5a;
+      padding: 20px;
+    }
+      </style>
+  </head>
+  <body>
+  <nav>
+      <div class="logo">To-Do</div>
+      
+      <ul>
+        <li><a class="active" href="index.NTask.html">New Task</a></li>
+        <li><a onclick="window.location.href='index.calander.html'">Calander</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a onclick="window.location.href='index.html'">Exit</a></li>
+      </ul>
+  </nav>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2><a href="index.overview.html">Overview</a></h2>
+        <ul>
+            <li><a href="index.tasks.html"><i class="fas fa-today"></i>Tasks</a></li>
+            <li><a href="index.projects.html"><i class="fas fa-projects"></i>Projects</a></li>
+            <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Reminders</a></li>
+        </ul> 
+    </div>
+    <div class="main_content">
+        <div class="header">Update the information for the task.</div>  
+        <div class="info">
+          <div class="Ntask">
+            <form id="Utasks">
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="Tname">Task Name:</label><br>
+                </div>
+
+                <div class="col-75">
+                  <input placeholder="Task Name..." autocomplete="off" type="text" id="Tname" name="Tname" required><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="Tdes">Task Description:</label><br>
+                </div>
+
+                <div class="col-75">
+                  <input placeholder="Description of the Task..." autocomplete="off" type="text" id="Tdes" name="Tdes"><br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="Date">Due Date:</label><br>
+                </div>
+
+                <div class="col-75">
+                  <input autocomplete="off" type="date" id="date" name="date" required><br>
+                </div>
+              </div>
+              
+                <div class="col-25">
+                  <label for="pri">Priority:</label><br>
+                </div>
+
+                <div class="col-75">
+                  <select id="pri" name="priority" required>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                  </select>
+                </div>
+                <div class="col-25">
+                  <label for="file">Choose item image to upload</label> 
+                  <input type="file" id="fileImage" name="file"> <br> <br> 
+
+                  <img src="" style="width: 300pt; height: 200pt;" id = "bannerImg"> <br> <br> 
+
+                </div>
+                  <input type="submit" id="btnUpdateItem" value="Update">
+            </form>
+          </div>
+      </div>
+    </div> 
+    <div class="footer">
+      <p>Copyright© Landshark™</p>
+    </div>
+  </div>
+  <script src="js/UpdateItem.js"></script>
+  <script src="js/UpdateItemDAO.js"></script>
+  </body>
+</html>

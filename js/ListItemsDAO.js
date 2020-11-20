@@ -5,6 +5,8 @@ function showAllItems(){
             try {
                 var obj_url = window.URL.createObjectURL(results[i].itemImage);
                 var item_id = results[i].id;
+                var item_ids = results[i].id;
+                var item_idz = results[i].id;
                 var img_id = "image-" + item_id;
                 $('#' + img_id).attr('src', obj_url);
                 $('#TaskTable').append(
@@ -20,6 +22,7 @@ function showAllItems(){
                     </tr>')
             }
             catch {
+                var item_id = results[i].id;
                 $('#TaskTable').append(
                     '<tr id="'+ results[i].id +'">\
                     <td>' + results[i].id + '</tda>\
@@ -39,7 +42,6 @@ function showAllItems(){
             var itemID = parseInt($(this).parent().attr('id'));
             
             deleteOne(itemID, function() {
-                //alert("Please re");
                 location.reload(true);
             })
                     
@@ -47,11 +49,10 @@ function showAllItems(){
         });
             
         //Event handler for each "Update" link created earlier
-        $('.actionUpdate').click (function() {
-            var itemID = parseInt($(this).parent().attr('id'));
-            window.open("../UpdateItemPage/UpdateItem.html?itemID="+itemID,"_self");		
-            return false;
-        });    
+    $('.actionUpdate').click (function() {
+        var itemid = parseInt($(this).parent().attr('id'));
+        window.open("../To-Do/index.ETask.html?itemID="+item_ids,"_self");		
+        return false;
+    });    
     });
 }
-
