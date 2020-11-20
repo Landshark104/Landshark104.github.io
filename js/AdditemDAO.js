@@ -9,8 +9,14 @@ function saveItemData() {
     'itemName' : itemName,
     'itemDesc' : itemDesc,
     'date' : date,
-    'pri' : pri
+    'pri' : pri,
     };
+
+    var fileInput = $('#fileImage');
+    var selectedFile = fileInput.get(0).files[0];
+    
+    if (typeof selectedFile != 'undefined')
+      data.itemImage = selectedFile;
 
     insertOne (data, function(lastID) {
         event.preventDefault();
