@@ -81,7 +81,7 @@ a {
 }
 
 .fade::after{
-    content: "Never miss a deadline again with our fast and easy to use tool. Proceed now to start using for free today!";
+    content: "Never miss a date or deadline again with our fast and easy to use tool. No sign up needed! Click proceed to start using for free today!";
     color: white;
     display: flex;
     justify-content: center;

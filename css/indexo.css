@@ -225,14 +225,14 @@ nav .menu-btn i{
   transition: 0.5s;
   position: absolute;
   top: 100px;
-  height: calc(100% - 100px);
+  height: 100px;
   text-align: center;
   padding: 20%;
   box-sizing: border-box;
 }
 
 .container .box:hover .content{
-  top: 100px;
+  top: 50px;
 }
 
 .container .box .content h3{
@@ -291,7 +291,7 @@ nav .menu-btn i{
 table {
   border-collapse: collapse;
   border-color: rgb(137, 139, 139);
-  margin-left: 15%;
+  margin-left: 10%;
 }
 
 th{
@@ -376,5 +376,10 @@ input[type=submit]:hover {
 }
 
 #search[type=text]:focus {
-  width: 65%;
+  width: 400px;
+}
+
+#map {
+  height: 600px;
+  width: 100%;
 }

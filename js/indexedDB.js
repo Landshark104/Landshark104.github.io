@@ -115,7 +115,7 @@ function deleteOne(id, successCallback) {
 		objectStore, request;
 		
 	objectStore = transaction.objectStore(currObjectStoreName);
-	var x = parseInt(prompt("Are you sure you want to delete this task?", "Enter the Task number to delete"), 10)
+	var x = parseInt(prompt("Enter the Task number to delete it","Are you sure you want to delete this task?"), 10)
 	request = objectStore.delete(x,id);
 	request.onerror = indexedDBError;
 	request.onsuccess = function(event) {

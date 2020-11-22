@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="css/indexo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNZ9qI-jGAw7z5Cm8l5y_Fo8HOlFO7UUQ&callback=initMap"></script>
+  </head>
+  <body>
+  <nav>
+      <div class="logo">To-Do</div>
+      
+      <ul>
+        <li><a class="active" href="#">New Task</a></li>
+        <li><a onclick="window.location.href='index.calander.html'">Calander</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a onclick="window.location.href='index.html'">Exit</a></li>
+      </ul>
+  </nav>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2><a href="index.overview.html">Overview</a></h2>
+        <ul>
+            <li><a href="index.tasks.html"><i class="fas fa-today"></i>Tasks</a></li>
+            <li><a href="index.Locations.html"><i class="fas fa-projects"></i>Locations</a></li>
+            <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Reminders</a></li>
+        </ul> 
+    </div>
+    <div class="main_content">
+        <div class="header">Lorem ipsum dolor sit</div>  
+        <div class="info">
+          <div id="map"></div>
+            <script>
+              function initMap(){//google maps script given in their JS api documentation
+                const uluru = { lat: -25.344, lng: 131.036 };
+                const map = new google.maps.Map(document.getElementById("map"), {
+                  zoom: 4,
+                  center: uluru,
+                });
+                const marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map,
+                });
+              }
+            </script>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright© Landshark™</p>
+    </div>
+    <script src="js/indexeddb.js"></script>
+  </body>
+</html>

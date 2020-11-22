@@ -22,21 +22,21 @@
       <h2><a href="index.overview.html">Overview</a></h2>
       <ul>
         <li><a href="index.tasks.html"><i class="fas fa-today"></i>Tasks</a></li>
-        <li><a href="index.projects.html"><i class="fas fa-projects"></i>Projects</a></li>
+        <li><a href="index.Locations.html"><i class="fas fa-projects"></i>Locations</a></li>
         <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Reminders</a></li>
     </ul>  
     </div>
     <div class="main_content">
-        <div class="header">Todays Tasks</div>  
+        <div class="header">Todays Tasks</div>
+          <input type="text" autocomplete="off" id="search" onkeyup="searchTable()" placeholder="Search for a Task Name..." title="Search for a task in the table">  
         <div class="info">
-          <input type="text" id="search" onkeyup="searchTable()" placeholder="Search for a Task Name..." title="Search">
           <div class="Ttable">
             <table border="1" id="TaskTable">
               <tr class="aligncenter" style="font-weight: bold;">
                   <th>Task Number</th>
                   <th>Name</th>
                   <th>Description</th>
-                  <th>Due Date</th>
+                  <th onclick="sortTable(3)">Due Date</th>
                   <th onclick="sortTable(4)">Priority</th>
                   <th>Image</th>
                   <th>Delete</th>
