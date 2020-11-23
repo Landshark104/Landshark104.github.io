@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="css/indexo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+  <nav>
+      <div class="logo">To-Do</div>
+      <ul>
+        <li><a onclick="window.location.href='index.NTask.html'" class="active">New Task</a></li>
+        <li><a onclick="window.location.href='index.calander.html'">Calander</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a onclick="window.location.href='index.html'">Exit</a></li>
+      </ul>
+  </nav>
+  <div class="wrapper">
+    <div class="sidebar">
+      <h2><a href="index.overview.html">Overview</a></h2>
+        <ul>
+            <li><a href="index.tasks.html"><i class="fas fa-today"></i>Tasks</a></li>
+            <li><a href="index.Locations.html"><i class="fas fa-projects"></i>Locations</a></li>
+            <li><a href="index.reminder.html"><i class="fas fa-reminder"></i>Reminders</a></li>
+        </ul> 
+    </div>
+    <div class="main_content">
+        <div class="header"><h2>Welcome back!</h2></div>  
+        <div class="info">
+          <div class="container">
+            <div class="box">
+              <div class="icon"><i class="fa fa-exclamation" aria-hidden="true"></i></div>
+              <div class="content">
+                <h3>Tasks</h3>
+                <p>The tasks in the table can be deleted, updated and sorted by date and priority!</p>
+              </div>
+          </div>
+            <div class="box">
+              <div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div>
+              <div class="content">
+                <h3>Locations</h3>
+                <p>These are the locations of the Tasks and events you have!</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="icon"><i class="fa fa-address-card" aria-hidden="true"></i></div>
+              <div class="content">
+                <h3>Reminders!</h3>
+                <p>Any reminders you have set (Feature coming soon)</p>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="footer">
+        <p>Copyright© Landshark™</p>
+      </div>
+</div>
+</body>
+</html>
