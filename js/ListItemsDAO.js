@@ -51,7 +51,7 @@ function showAllItems(){
         //Event handler for each "Update" link created earlier
     $('.actionUpdate').click (function() {
         var itemid = parseInt($(this).parent().attr('id'));
-        window.open("../To-Do/index.ETask.html?itemID="+item_ids,"_self");//had to use item_ids as the id throws and key error		
+        window.open("index.ETask.html?itemID="+item_ids,"_self");//had to use item_ids as the id throws and key error		
         return false;
     });    
     });
