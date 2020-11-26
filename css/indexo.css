@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); /*overall font for every pages text*/
+*{/*Some global settings constant on each page*/
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 } 
-nav{
+nav{/*Some basic navigation bar settings*/
   display: flex;
   height: 80px;
   width: 100%;
@@ -15,7 +15,7 @@ nav{
   padding: 0 50px 0 100px;
   flex-wrap: wrap;
 }
-nav .logo{
+nav .logo{/*Styling for the logo "To-Do"*/
   color: #c2961c;
   font-size: 35px;
   font-weight: 600;
@@ -25,7 +25,7 @@ nav ul{
   flex-wrap: wrap;
   list-style: none;
 }
-nav ul li a{
+nav ul li a{/*Styling the nav bar links*/
   color: #c2961c;
   text-decoration: none;
   font-size: 18px;
@@ -37,7 +37,7 @@ nav ul li a{
   cursor: pointer 
 }
 nav ul li a.active,
-nav ul li a:hover{
+nav ul li a:hover{/*Styling for the nav bar hover*/
   color: #111;
   background: #745a12;
 }
@@ -47,7 +47,7 @@ nav .menu-btn i{
   cursor: pointer;
   display: none;
 }
-@media (max-width: 1000px){
+@media (max-width: 1000px){/*Some config for the nav bar size*/
   nav{
     padding: 0 40px 0 50px;
   }
@@ -83,12 +83,12 @@ nav .menu-btn i{
   }
 }
 
-.wrapper{
+.wrapper{/*wrapper is the main body excluding the nav bar*/
   display: flex;
   position: relative;
 }
 
-.wrapper .sidebar{
+.wrapper .sidebar{ /*Side bar config*/
   width: 200px;
   height: 100%;
   background: #141414;
@@ -96,14 +96,14 @@ nav .menu-btn i{
   position: absolute;
 }
 
-.wrapper .sidebar h2{
+.wrapper .sidebar h2{ /*Side bar header*/
   color: #c2961c;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 30px;
 }
 
-.wrapper .sidebar h2 :visited {
+.wrapper .sidebar h2 :visited { /*Side bart is a link this is used to stop the color from changing*/
   color: #c2961c;
   text-transform: uppercase;
   text-align: center;
@@ -111,7 +111,7 @@ nav .menu-btn i{
   padding-left: 5%;
 }
 
-.wrapper .sidebar ul li{
+.wrapper .sidebar ul li{/*styling for the list for the side bar*/
   padding: 15px;
   border-bottom: 1px solid #bdb8d7;
   border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -127,7 +127,7 @@ nav .menu-btn i{
   width: 25px;
 }
 
-.wrapper .sidebar ul li:hover{
+.wrapper .sidebar ul li:hover{/*change the background of thew list item when hovered on*/
   background-color: #745a12;
 }
     
@@ -135,12 +135,12 @@ nav .menu-btn i{
   color: #fff;
 }
 
-.wrapper .main_content{
+.wrapper .main_content{/*define the main content bar where the content for the page goes*/
   width: 100%;
   margin-left: 200px;
 }
 
-.wrapper .main_content .header{
+.wrapper .main_content .header{/*header section of the main content*/
   padding: 30px;
   margin: 10px;
   background: #141414;/*change header background*/
@@ -171,7 +171,7 @@ nav .menu-btn i{
   background: #141414; /*change header background*/
 }
 
-.container{
+.container{/*container for the overview boxes*/
   position: relative;
   width: 1200px;
   height: 300px;
@@ -179,9 +179,9 @@ nav .menu-btn i{
   background: #141414;
 }
 
-.container .box{
+.container .box{ /* container for the main boxs on the overview page*/
   position: relative;
-  width: calc(400px - 30px);
+  width: calc(400px - 30px);/*used calc to get an accurate size for the screen*/
   height: calc(300px - 30px);
   margin: 15px;
   float: left;
@@ -190,7 +190,7 @@ nav .menu-btn i{
   border-radius: 10px;
 }
 
-.container .box .icon{
+.container .box .icon{/*styling for the icons*/
   position: absolute;
   top: 0%;
   left: 0%;
@@ -200,7 +200,7 @@ nav .menu-btn i{
   z-index: 1;
 }
 
-.container .box:hover .icon{
+.container .box:hover .icon{/*moves the icons on hover changing size*/
   top: 20px;
   left: calc(50% - 40px);
   width: 80px;
@@ -208,7 +208,7 @@ nav .menu-btn i{
   border-radius: 50%;
 }
 
-.container .box .icon .fa{
+.container .box .icon .fa{/*styling for the box icon after its change*/
   position: absolute;
   top: 50%;
   left: 50%;
@@ -235,7 +235,7 @@ nav .menu-btn i{
   top: 50px;
 }
 
-.container .box .content h3{
+.container .box .content h3{/*changes the header font size in the boxes*/
   margin: 0 0 10px;
   padding: 0;
   color: #000;
@@ -247,7 +247,7 @@ nav .menu-btn i{
   padding: 0;
   color: #000;
 }
-
+/*container is the styling for the boxes on the overview page*/
 .container .box:nth-child(1){
   background: #4acf50;
 }
@@ -272,12 +272,12 @@ nav .menu-btn i{
   background: #23798e;
 }
 
-.calander{
+.calander{/*Some calander styling */
   padding-left: 195px;
   padding-top: 0%;
 }
 
-.footer {
+.footer {/*styling for the footer of each page*/
   position: fixed;
   left: 0;
   bottom: 0;
@@ -288,23 +288,23 @@ nav .menu-btn i{
   padding-bottom: 0%;
 }
 
-table {
+table {/*overall styling for the table*/
   border-collapse: collapse;
   border-color: rgb(137, 139, 139);
   margin-left: 10%;
 }
 
-th{
+th{ /*Set the table header background*/
   background-color: #242424;
 }
 
-th, td {
+th, td { /*Styling for the Task table*/
   padding: 20px;
   color: #c2961c;
   cursor: pointer;
 }
 
-input[type=text], select{
+input[type=text], select{ /*{styling for the form text boxes for the new task page)*/
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -312,13 +312,13 @@ input[type=text], select{
   resize: vertical;
 }
 
-label {
+label { /*{styling for the form labels for the new task page)*/
   padding: 12px 12px 12px 0;
   display: inline-block;
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
+input[type=submit] {/*{styling for the form button for the new task page)*/
+  background-color: #afad4c;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -327,24 +327,24 @@ input[type=submit] {
   float: right;
 }
 
-input[type=submit]:hover {
-  background-color: #45a049;
+input[type=submit]:hover { /*{styling for the form button when hovered over for the new task page)*/
+  background-color: #97a045;
 }
 
 
-.col-25 {
+.col-25 { /*{styling for the form for the new task page)*/
   float: left;
   width: 25%;
   margin-top: 6px;
 }
 
-.col-75 {
+.col-75 { /*{styling for the form for the new task page)*/
   float: left;
   width: 75%;
   margin-top: 6px;
 }
 
-/* Clear floats after the columns */
+/* Clear floats after the columns (styling for the form for the new task page)*/
 .row:after {
   content: "";
   display: table;
@@ -357,9 +357,9 @@ input[type=submit]:hover {
     width: 100%;
     margin-top: 0;
   }
-}
+} 
 
-#search[type=text] {
+#search[type=text] { /*Search Box styling*/
   width: 16%;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -379,7 +379,7 @@ input[type=submit]:hover {
   width: 400px;
 }
 
-#map {
+#map { /*Map styling*/
   height: 600px;
   width: 100%;
 }

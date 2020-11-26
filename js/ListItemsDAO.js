@@ -5,7 +5,7 @@ function showAllItems(){
             try {
                 var obj_url = window.URL.createObjectURL(results[i].itemImage);
                 var item_id = results[i].id;
-                var item_ids = results[i].id;
+                var item_ids = results[i].id;//used in the update function
                 var item_idz = results[i].id;
                 var img_id = "image-" + item_id;
                 $('#' + img_id).attr('src', obj_url);
@@ -21,7 +21,7 @@ function showAllItems(){
                     <td><a href=" " class="actionUpdate">Update</a></td>\
                     </tr>')
             }
-            catch {
+            catch {//put a catch in to prevent a table error if the user adds no image else it would crash the table 
                 var item_id = results[i].id;
                 $('#TaskTable').append(
                     '<tr id="'+ results[i].id +'">\
@@ -42,7 +42,7 @@ function showAllItems(){
             var itemID = parseInt($(this).parent().attr('id'));
             
             deleteOne(itemID, function() {
-                location.reload(true);
+                location.reload(true);//reloads the page after the delete
             })
                     
             return false;
@@ -51,7 +51,7 @@ function showAllItems(){
         //Event handler for each "Update" link created earlier
     $('.actionUpdate').click (function() {
         var itemid = parseInt($(this).parent().attr('id'));
-        window.open("../To-Do/index.ETask.html?itemID="+item_ids,"_self");		
+        window.open("../To-Do/index.ETask.html?itemID="+item_ids,"_self");//had to use item_ids as the id throws and key error		
         return false;
     });    
     });

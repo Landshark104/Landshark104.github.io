@@ -2,8 +2,8 @@ $(document).on('change', '#fileImage', function(event) {
 	previewFile();
 });
 
-//To show the selected file in an image container
-function previewFile(){
+
+function previewFile(){//To show the selected file in an image container
 	var preview = document.querySelector('img'); //selects the query named img
     var file    = document.querySelector('input[type=file]').files[0]; //sames as here
     var reader  = new FileReader();
@@ -20,13 +20,12 @@ function previewFile(){
 }
 
 
-$('#Ntasks').submit(function(event){
+$('#Ntasks').submit(function(event){//Jquery to add the form data to the object for the database
     event.preventDefault();
-    setDatabaseName('dbTasks',['UsersObjectStore', 'ItemsObjectStore']);
+    setDatabaseName('dbTasks',['UsersObjectStore', 'ItemsObjectStore']);//get the data base name 
     setCurrObjectStoreName('ItemsObjectStore');
     startDB(function(){
         saveItemData();
         alert("Item has been saved. Click Tasks to view the new task.")
-        location.reload(true);
     })
 });
