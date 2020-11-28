@@ -11,6 +11,10 @@ var data;
 startDB(function () {
 	selectOne(itemID, function(result) {
 		$('#Tname').val(result.itemName);
+		$('#Tdes').val(result.itemDesc);
+		$('#date').val(result.date);
+		$('#pri').val(result.pri);
+		$('#stat').val(result.stat);
 		data = result;
 	})
 })

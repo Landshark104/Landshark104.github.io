@@ -40,7 +40,6 @@
         <div class="info">
           <div class="Ntask">
             <form id="Utasks">
-
               <div class="row">
                 <div class="col-25">
                   <label for="Tname">Task Name:</label><br>
@@ -63,14 +62,15 @@
 
               <div class="row">
                 <div class="col-25">
-                  <label for="Date">Due Date:</label><br>
+                  <label for="date">Due Date:</label><br>
                 </div>
 
                 <div class="col-75">
-                  <input autocomplete="off" type="date" id="date" name="date" required><br>
+                  <input placeholder="Date..." autocomplete="off" type="date" id="date" name="date" required><br>
                 </div>
               </div>
-              
+
+              <div class="row">
                 <div class="col-25">
                   <label for="pri">Priority:</label><br>
                 </div>
@@ -82,14 +82,36 @@
                     <option value="Low">Low</option>
                   </select>
                 </div>
+              </div>
+
+              <div class="row">
                 <div class="col-25">
-                  <label for="file">Choose item image to upload</label> 
+                  <label for="stat">Status:</label><br>
+                </div>
+
+                <div class="col-75">
+                  <select id="stat" name="status" required>
+                    <option value="Completed">Completed</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Not Attempted">Not Attempted</option>
+                  </select>
+                </div>
+              </div> 
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="file">Choose item image to upload:</label>
+                </div> 
+
+
+                <div class="col-75">
                   <input type="file" id="fileImage" name="file"> <br> <br> 
 
                   <img src="" style="width: 300pt; height: 200pt;" id = "bannerImg"> <br> <br> 
 
                 </div>
-                  <input type="submit" id="btnUpdateItem" value="Update">
+                  <input type="submit" id="btnSaveItem" value="Submit">
+              </div>
             </form>
           </div>
       </div>

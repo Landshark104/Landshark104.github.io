@@ -129,6 +129,7 @@ function deleteOne(id, successCallback) {
 	};
 }
 
+
 //updateOne updates a specific data in the current object store
 function updateOne(data, successCallback) {
 	var transaction = db.transaction([currObjectStoreName], IDBTransaction.READ_WRITE || 'readwrite'),

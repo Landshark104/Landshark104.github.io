@@ -5,7 +5,8 @@ function updateItemData(data) {
 	var itemName = $('#Tname').val();
 	var itemDesc = $('#Tdes').val();
     var date = $('#date').val();
-    var pri = $('#pri').val();
+	var pri = $('#pri').val();
+	var stat = $('#stat').val();
     
 		
 	//Create an item object combining name, desc and price attributes
@@ -13,6 +14,8 @@ function updateItemData(data) {
 	data.itemDesc = itemDesc;
 	data.date = date;
 	data.pri = pri;
+	data.stat = stat;
+
 	
 	//Add the user selected image to data object
 	var fileInput = $('#fileImage');

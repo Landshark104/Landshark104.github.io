@@ -4,12 +4,14 @@ function saveItemData() {
     var itemDesc = $('#Tdes').val();
     var date = $('#date').val();
     var pri = $('#pri').val();
+    var stat = $('#stat').val();
     
     var data = {
     'itemName' : itemName,
     'itemDesc' : itemDesc,
     'date' : date,
     'pri' : pri,
+    'stat':stat
     };
 
     var fileInput = $('#fileImage');//contains the img file
